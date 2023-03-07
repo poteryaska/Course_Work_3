@@ -1,5 +1,10 @@
 import pytest
-from utils import get_executed_operation, get_last_five_operations, get_total_information
+from utils import load_data, get_executed_operation, get_last_five_operations, get_total_information
+
+
+def test_load_data():
+  assert load_data() is not None
+  assert len(load_data()) > 0
 
 @pytest.fixture
 def test_data():
